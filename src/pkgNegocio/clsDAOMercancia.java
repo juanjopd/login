@@ -40,7 +40,7 @@ public class clsDAOMercancia extends clsMercancia {
     }
 
     public String consultar() {
-        String SQL = "SELECT id, nombre FROM administrador.tbl_mercancia WHERE id='" + super.getId() + "'";
+        String SQL = "SELECT id, nombre, cantidad FROM administrador.tbl_mercancia WHERE id='" + super.getId() + "'";
         java.sql.ResultSet hr = null;
         hr = con.consultarSQL(SQL);
         try {

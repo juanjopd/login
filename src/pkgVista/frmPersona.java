@@ -19,6 +19,7 @@ public class frmPersona extends javax.swing.JFrame {
      */
     public frmPersona() {
         initComponents();
+        setLocationRelativeTo(null);
         listar();
     }
     

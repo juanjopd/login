@@ -17,6 +17,7 @@ public class frmMercancia extends javax.swing.JFrame {
     /** Creates new form frmMercancia */
     public frmMercancia() {
         initComponents();
+        setLocationRelativeTo(null);
         listar();
     }
     

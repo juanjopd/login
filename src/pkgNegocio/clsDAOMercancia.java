@@ -35,7 +35,7 @@ public class clsDAOMercancia extends clsMercancia {
     }
 
     public boolean modificar(){
-        String SQL = "UPDATE administrador.tbl_mercancia SET nombre='" + super.getNombre() + "' WHERE id=  cantidad='" + super.getId() + super.getCantidad() + "'";
+        String SQL = "UPDATE administrador.tbl_mercancia SET cantidad='" + super.getNombre() + "' WHERE id=  cantidad='" + super.getId() + super.getCantidad() + "'";
         return con.procesarSQL(SQL);
     }
 

@@ -38,6 +38,7 @@ public class frmMenu extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Menu");
 
         btnCerrar.setText("Cerrar Sesión");
         btnCerrar.addActionListener(new java.awt.event.ActionListener() {
@@ -91,7 +92,7 @@ public class frmMenu extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(112, 112, 112)
                         .addComponent(btnCerrar)))
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

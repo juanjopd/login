@@ -53,6 +53,7 @@ public class frmPersona extends javax.swing.JFrame {
         lblMensaje = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Persona");
 
         bar.setRollover(true);
 

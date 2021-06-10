@@ -35,12 +35,12 @@ public class clsDAOMercancia extends clsMercancia {
     }
 
     public boolean modificar(){
-        String SQL = "UPDATE administrador.tbl_mercancia SET cantidad='" + super.getNombre() + "' WHERE id=  cantidad='" + super.getId() + super.getCantidad() + "'";
+        String SQL = "UPDATE administrador.tbl_mercancia SET cantidad='" + super.getCantidad() + "' WHERE id= '" + super.getId() + "'";
         return con.procesarSQL(SQL);
     }
 
     public String consultar() {
-        String SQL = "SELECT id, nombre, cantidad FROM administrador.tbl_mercancia WHERE id='" + super.getId() + "'";
+        String SQL = "SELECT nombre, cantidad FROM administrador.tbl_mercancia WHERE nombre='" + super.getNombre() + "'";
         java.sql.ResultSet hr = null;
         hr = con.consultarSQL(SQL);
         try {
@@ -48,7 +48,7 @@ public class clsDAOMercancia extends clsMercancia {
                 return hr.getString(2);
             }
         } catch (SQLException ex) {
-            Logger.getLogger(clsDAOPersona.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(clsDAOMercancia.class.getName()).log(Level.SEVERE, null, ex);
         }
         return "no";
     }

@@ -53,6 +53,7 @@ public class frmMercancia extends javax.swing.JFrame {
         tblInfo = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Mercancia");
 
         bar.setRollover(true);
 
@@ -211,14 +212,14 @@ public class frmMercancia extends javax.swing.JFrame {
         // TODO add your handling code here:
         pkgNegocio.clsDAOMercancia obj;
         obj = new pkgNegocio.clsDAOMercancia();
-        obj.setId(txtId.getText());
+        obj.setNombre(txtNombre.getText());
         
         String resultado=obj.consultar();
         if(resultado.equals("no")){
             JOptionPane.showMessageDialog(rootPane, "No esta");
         }
         else{
-            txtNombre.setText(resultado);
+            txtCantidad.setText(resultado);
         }
     }//GEN-LAST:event_btnconsultarActionPerformed
 
@@ -243,6 +244,8 @@ public class frmMercancia extends javax.swing.JFrame {
         // TODO add your handling code here:
         pkgNegocio.clsDAOMercancia obj;
         obj = new pkgNegocio.clsDAOMercancia();
+        obj.setId(txtId.getText());
+        obj.setCantidad(txtCantidad.getText());
         
         if(obj.modificar() == false){
             listar();
